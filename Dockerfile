@@ -5,7 +5,7 @@ ARG TARGETARCH
 RUN echo building for "$TARGETPLATFORM"
 
 WORKDIR /go/src/app
-
+RUN go env -w GOPROXY=https://goproxy.cn
 COPY go.mod go.mod
 COPY go.sum go.sum
 # download if above files changed

@@ -10,7 +10,7 @@ RUN export DEBIAN_FRONTEND=noninteractive; \
     fonts-sil-gentium fonts-sil-gentium-basic && \
     apt clean && \
     rm -rf /var/lib/apt/lists/*
-    
+RUN go env -w GOPROXY=https://goproxy.cn    
 RUN go install github.com/cosmtrek/air@latest
 
 #COPY . .
